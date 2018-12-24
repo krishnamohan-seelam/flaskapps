@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block page_content %}
+{% if title %}
+<title>{{ title }} - Microblog</title>
+{% else %}
+<title>Microblog</title>
+{% endif %}
+<div class="ui grid">
+    <h1> Welcome to Microblog </h1>
+</div>
+
+<h2>Hello, {{ user.username }}!</h2>
+
+<div class="ui left aligned container">
+<div class="ui grid">
+<div class="eight wide column">
+    <div class="column">
+
+            <div class="ui items">
+                {% for post in posts %}
+                <div class="ui segment">
+
+                    <a class="ui medium label">
+                        <img class="ui right spaced avatar image" src="/images/avatar/small/elliot.jpg">
+                        {{ post.author.username }} says:
+                    </a>
+                    <b> {{ post.body }}</b>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

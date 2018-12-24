@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Flask Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/semantic.min.css" rel="stylesheet" media="screen"/>
+    <script href="/static/semantic.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="ui top menu">
+
+    <div class="item"><a href="">Microblog</a></div>
+    <a class="item" href="">Home </a>
+     <a class="item" href="/login">Login</a>
+    <a class="item" href="">Register Here</a>
+</div>
+<br>
+{% block content %}
+
+{% block page_content %}{% endblock %}
+
+{% endblock %}
+</body>
+</html>
